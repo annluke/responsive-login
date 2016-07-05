@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login Form</title>
+        <link rel="stylesheet" href="stylemq.css">
+        <script src="script.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body class="main-body">
+		<div class="header">
+			<h1 id="page-heading">MyLog</h1>
+		</div>
+		<section class="main-container">
+			<div class="login-container">
+				<h2 id="login-heading">LOGIN</h2>
+				<form method="post">
+					<div class="row">
+						<span class="col-4 col-m-4 right-text">Username:</span>
+						<span class="col-8 col-m-8">
+							<input type="text" id="name-id" name="username" required>
+						</span>
+	  				</div>
+	  				<div class="row">
+	  					<span class="col-4 col-m-4 right-text">Password:</span>
+	  					<span class="col-8 col-m-8">
+	  						<input type="password" id="pass-id" name="password" required>
+	  					</span>
+	  				</div>
+	  				<div class="row">
+	  					<input type="submit" class="button" onclick="loginCheck()" name="login" value="Log in">
+	  				</div>
+				</form>	
+			</div>	
+		</section>
+		<div class="footer">
+			<h3>Help</h3>
+		</div>
+	</body>
+</html>
