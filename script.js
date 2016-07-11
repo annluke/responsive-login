@@ -1,35 +1,28 @@
 function loginCheck () {
 	var users = [
 	    {
-	    "username":"jay",
-	    "password":"jay123"
+	    "jay": "jay123"
 	    }, 
 	    {
-	    "username":"anna",
-	    "password":"anna123"
+	    "anna": "anna123"
 	    },
 	    {
-	    "username":"arjun",
-	    "password":"arjun123"
+	    "arjun": "arjun123"
 	    }
 	];
-	var userName = document.getElementById("name-id").value;
-	var passWord = document.getElementById("pass-id").value;
-	var i;
-	var result;
+	var userName, passWord, i, result = 0;
+	userName = document.getElementById("name-id").value;
+	passWord = document.getElementById("pass-id").value;
 	for (i = 0; i < users.length; i++) {
-		if(userName == users[i].username && passWord == users[i].password) {
-			result = 1;
-			break;
-		}
-		else {
-			result = 0;
+		if(users[i].hasOwnProperty(userName)) {
+			if(users[i][userName] == passWord) {
+				alert("Login successful!");
+				result = 1;
+				break;
+			}
 		}
 	}
-	if(result == 1) {
-		alert("Login successful!");
-	}
-	else {
+	if(result == 0) {
 		alert("Invalid username or password!");
 	}
 }
